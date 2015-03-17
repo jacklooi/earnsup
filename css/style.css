@@ -31,8 +31,10 @@ h2::after { content: " "; border: solid 2px #3ccab5; display: block; width: 45px
     background: rgba(60,202,202,1);
     height: 58px;
     border: 2px solid rgba(60,202,202,1);
-    font: 500 22px "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 500;
     padding: 0 21px;
+    margin: 5px 0;
     -moz-transition: color 0.1s linear, background-color 0.1s linear, border-color 0.1s linear;
     -ms-transition: color 0.1s linear, background-color 0.1s linear, border-color 0.1s linear;
     -o-transition: color 0.1s linear, background-color 0.1s linear, border-color 0.1s linear;
@@ -90,10 +92,11 @@ nav ul { list-style: none; list-style-image: none; }
 nav ul li { display: inline-block; border-right: 1px dotted rgba(255, 255, 255, 0.2); transition: all 0.5s ease; -moz-transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; padding-left: 18px; position: relative; }
 nav ul li:last-child { border: none; }
 nav ul li a { color: rgba(255, 255, 255, 0.6); display: block; padding: 20px; transition: all 0.5s ease; -moz-transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; padding-left: 0; position: relative; font-size: 16px; }
-nav ul li a:hover, nav ul li a:focus { text-decoration: none; color: rgba(255, 255, 255, 1); }
+nav ul li a:hover, nav ul li a:focus, nav ul li .active { text-decoration: none; color: rgba(255, 255, 255, 1); }
+
 
 header {
-    padding: 20px 0 220px;
+    padding: 20px 0 250px;
     background: url(../img/header.jpg) no-repeat 50% 50%;
     color: white;
     -moz-background-size: cover;
@@ -105,7 +108,13 @@ header {
     box-sizing: border-box;
 }
 
-header .header-content { padding-top: 160px; }
+header .header-content { padding-top: 180px; }
+
+@media (max-width: 479px) { 
+  header .header-content { padding-top: 100px; }
+  nav { padding: 0 5px; }
+  nav ul li a span { display: none; }
+}
 
 header h1 {
     font-size: 70px;
@@ -141,8 +150,8 @@ header .buttons-wrapper .button-stripe {
 .brokerage-button { padding-top: 30px; margin: 0 -10px; clear: both; }
 .button-link { height: 62px; float: left; padding-left: 25px; padding-right: 0; width: 180px; text-align: left; margin: 0 10px 20px; position: relative; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .button-link:after { content: ""; position: absolute; left: 23px; top: 14px; width: 32px; height: 32px; background-position: -100px 0; }
-.button-link-title { padding: 11px 0 1px; display: block; font-size: 11px; line-height: 13px; text-align: left; }
-.button-link-subtitle { display: block; font-size: 21px; line-height: 23px; text-align: left; }
+.button-link-title { padding: 11px 0 1px; display: block; font-size: 13px; line-height: 13px; text-align: left; }
+.button-link-subtitle { display: block; font-size: 23px; line-height: 23px; text-align: left; }
 
 /*=======================
  Blog Section
@@ -165,6 +174,7 @@ header .buttons-wrapper .button-stripe {
 .header nav .nav-tabs > li { float:none; display: inline-block; }
 .header nav .nav-tabs { text-align: center; }
 .header nav a { color:#fff; }
+.header p { color:#fff; }
 
 /*=======================
  Main Section
@@ -184,6 +194,7 @@ header .buttons-wrapper .button-stripe {
 .setting a { text-decoration: none; margin: 10px; color:#fff; }
 .setting a:hover, .setting a:focus { color: rgba(60,202,202,1); }
 .settings { background: #4d4d4d no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; padding: 20px 20px; height: auto; color:#fff; display:none;}
+.settings p { color:#fff; }
 
 /*=======================
  Summary Section
