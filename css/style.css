@@ -95,53 +95,13 @@ nav ul li a { color: rgba(255, 255, 255, 0.6); display: block; padding: 20px; tr
 nav ul li a:hover, nav ul li a:focus, nav ul li .active { text-decoration: none; color: rgba(255, 255, 255, 1); }
 
 
-header {
-    padding: 20px 0 250px;
-    background: url(../img/header.jpg) no-repeat 50% 50%;
-    color: white;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
+header { padding: 20px 0 250px; background: url(../img/header.jpg) no-repeat 50% 50%; color: white; -moz-background-size: cover; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 header .header-content { padding-top: 180px; }
-
-@media (max-width: 479px) { 
-  header .header-content { padding-top: 100px; }
-  nav { padding: 0 5px; }
-  nav ul li a span { display: none; }
-}
-
-header h1 {
-    font-size: 70px;
-    line-height: 70px;
-    font-weight: 500;
-    margin-bottom: 38px;
-}
-
+header h1 { font-size: 70px; line-height: 70px; font-weight: 500; margin-bottom: 38px; }
 header h1 span { color: rgba(60,202,202,1); display: inline-block; font-weight: 200; }
-header p {
-    padding: 12px 0 0;
-    font-size: 24px;
-    line-height: 24px;
-    color: white;
-}
-
-header .buttons-wrapper {
-    padding-top: 53px
-}
-
-header .buttons-wrapper .button-stripe {
-    margin-left: 14px
-}
-
-.header-img {
-    float: right
-}
+header p { padding: 12px 0 0; font-size: 24px; line-height: 24px; color: white; }
+header .buttons-wrapper { padding-top: 53px; }
+header .buttons-wrapper .button-stripe { margin-left: 14px; }
 
 .brokerage { padding: 31px 0 25px; }
 .brokerage-content { padding: 37px 20px 50px 20px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
@@ -165,16 +125,12 @@ header .buttons-wrapper .button-stripe {
 /*=======================
  Header Section
 =======================*/
-.header { background: #fff no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; height: auto; }
-.header .title-list { background: #1e1e1e; color:#fff; padding: 40px 0 0 0; letter-spacing: 1px; }
-.header h1 { font-size: 40px; margin: 10px; }
-.header h1 span { color: rgba(60,202,202,1); display: inline-block; }
-.header p { font-size: 16px; margin: 10px; padding-bottom: 30px; }
-.header nav { display:none; }
-.header nav .nav-tabs > li { float:none; display: inline-block; }
-.header nav .nav-tabs { text-align: center; }
-.header nav a { color:#fff; }
-.header p { color:#fff; }
+.header { padding: 20px 0; background: url(../img/header.jpg) no-repeat 20% 20%; color: white;  -moz-background-size: cover; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.header h1 { font-size: 40px; margin: 10px 20px; }
+.header h1 a { color: rgba(255,255,255,0.8); transition: all 0.5s ease; -moz-transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; position: relative; }
+.header h1 a span { color: rgba(60,202,202,0.9); display: inline-block; transition: all 0.5s ease; -moz-transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; position: relative; }
+.header h1 a:hover, .header h1 a:focus { text-decoration: none; color: rgba(255, 255, 255, 1); }
+.header h1 a:hover span, .header h1 a:focus span { text-decoration: none; color: rgba(60,220,220,1); }
 
 /*=======================
  Main Section
@@ -220,3 +176,13 @@ Contact
 =======================*/
 footer { background: #1e1e1e no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; padding: 35px 0; color:#fff; }
 footer span { color: rgba(60,202,202,1); }
+
+@media (max-width: 979px) { 
+  nav ul li a span { display:none; }
+}
+
+@media (max-width: 479px) { 
+  header .header-content { padding-top: 100px; }
+  nav { padding: 0 5px; }
+  .header { text-align:center;}
+}
