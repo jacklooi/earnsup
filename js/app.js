@@ -45,6 +45,7 @@
 		this.portfolio = portfolio[0];
 		
 		this.clearingFee = function() {
+			var sumTotal=0;
 			var total=0;
 			for(var i=0; i<this.stock.length; i++)
 			{
@@ -53,7 +54,13 @@
 			
 			total += (this.portfolio.sellPrice * this.portfolio.sellUnit * this.share.perLot);
 			
-			return total*(this.share.clearPerc/100);
+			sumTotal = total*(this.share.clearPerc/100);
+			
+			if(!this.share.gstExempt) {
+				sumTotal += sumTotal*(this.share.gstPerc/100);
+			}
+			
+			return sumTotal;
 		};
 		
 		this.stampDuty = function() {
@@ -157,7 +164,7 @@
 			stampRate : 1,
 			brokerage : 0.1,
 			minBroker : 8,
-			gstExempt : true,
+			gstExempt : false,
 			gstPerc : 6,
 			perLot : 100
 		}

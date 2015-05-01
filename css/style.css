@@ -19,113 +19,150 @@ h2::after { content: " "; border: solid 2px #3ccab5; display: block; width: 45px
 .dark-box { background: #f3f5f8; -webkit-box-shadow: 0px 3px 0px 0px #f0f2f4; -moz-box-shadow: 0px 3px 0px 0px #f0f2f4; box-shadow: 0px 3px 0px 0px #f0f2f4; }
 .light-box { background-color: #fff; -webkit-box-shadow: 0px 3px 0px 0px #f0f2f4; -moz-box-shadow: 0px 3px 0px 0px #f0f2f4; box-shadow: 0px 3px 0px 0px #f0f2f4; padding: 20px 0; }
 .light-box:hover, .light-box:focus { -webkit-box-shadow: 0px 3px 0px 0px #3dc9b3; -moz-box-shadow: 0px 3px 0px 0px #3dc9b3; box-shadow: 0px 3px 0px 0px #3dc9b3; }
-.box-hover { transition: all 500ms ease-in-out; -webkit-transition: all 500ms ease-in-out; -moz-transition: all 500ms ease-in-out; -o-transition: all 500ms ease-in-out; }
+.box-hover { transition: all 200ms ease-in-out; -webkit-transition: all 200ms ease-in-out; -moz-transition: all 200ms ease-in-out; -o-transition: all 200ms ease-in-out; }
 .box-hover:hover, .box-hover:focus { transform: translate(0, -15px); -webkit-transform: translate(0, -15px); -ms-transform: translate(0, -15px); }
 .wrapper { height: 650px; }
 .nopadding { padding: 0; }
 .inner { padding-top: 170px; }
 .wrap { margin: 0 auto; padding: 0 15px; max-width: 1140px; }
 
-.button {
-    color: white;
-    background: rgba(60,202,202,1);
-    height: 58px;
-    border: 2px solid rgba(60,202,202,1);
-    font-size: 22px;
-    font-weight: 500;
-    padding: 0 21px;
-    margin: 5px 0;
-    -moz-transition: color 0.1s linear, background-color 0.1s linear, border-color 0.1s linear;
-    -ms-transition: color 0.1s linear, background-color 0.1s linear, border-color 0.1s linear;
-    -o-transition: color 0.1s linear, background-color 0.1s linear, border-color 0.1s linear;
-    -webkit-transition: color 0.1s linear, background-color 0.1s linear, border-color 0.1s linear;
-    transition: color 0.1s linear, background-color 0.1s linear, border-color 0.1s linear;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
+/*=======================
+ Global Buttons
+=======================*/
+.button { color: white; background:rgba(60,202,202,1); height:58px; border:2px solid rgba(60,202,202,1); font-size:22px; font-weight:500; padding:0 21px; margin:5px 0; -moz-transition:color 0.1s linear,background-color 0.1s linear,border-color 0.1s linear; -ms-transition:color 0.1s linear,background-color 0.1s linear,border-color 0.1s linear; -o-transition:color 0.1s linear,background-color 0.1s linear,border-color 0.1s linear; -webkit-transition:color 0.1s linear,background-color 0.1s linear,border-color 0.1s linear; transition:color 0.1s linear,background-color 0.1s linear,border-color 0.1s linear; -moz-border-radius:5px; -webkit-border-radius:5px;border-radius:5px; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; }
+.button:hover { background:rgba(60,222,222,1); border-color:rgba(60,222,222,1); }
 
-.button:hover {
-    background: rgba(60,222,222,1);
-    border-color: rgba(60,222,222,1);
-}
+a.button { text-decoration: none; display:inline-block; line-height:54px; color:#fff; }
+a.button:hover { color:#fff;}
+a.button:active { color:#fff; }
 
+a.button.button-stripe { background-color:rgba(0,0,0,0); border-color:#fff; }
+a.button.button-stripe:hover { color: #222222; background-color:#fff; border-color:#fff; }
+a.button.button-stripe:active { color:#222222; background-color:#e5e5e5; border-color:#e5e5e5; }
 
-a.button {
-    text-decoration: none;
-    display: inline-block;
-    line-height: 54px;
-    color: white;
-}
+.button-link { height: 62px; float: left; padding-left: 25px; padding-right: 0; width: 200px; text-align: left; margin: 0 10px 20px; position: relative; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.button-link:after { content: ""; position: absolute; left: 23px; top: 14px; width: 32px; height: 32px; background-position: -100px 0; }
+.button-link-title { padding: 11px 0 1px; display: block; font-size: 13px; line-height: 13px; text-align: left; }
+.button-link-subtitle { display: block; font-size: 23px; line-height: 23px; text-align: left; }
+.back-to-top { position:fixed; bottom:2em; right:10%; text-decoration:none; color:#000; background-color:rgba(235,235,235,0.7); font-size:16px; padding:1em; display:none; }
+.back-to-top:hover { background-color:rgba(135,135,135,0.5); }
 
-a.button:hover {
-    color: white
-}
-
-a.button:active {
-    color: white
-}
-
-a.button.button-stripe {
-    background-color: rgba(0, 0, 0, 0);
-    border-color: white;
-}
-
-a.button.button-stripe:hover {
-    color: #222222;
-    background-color: white;
-    border-color: white;
-}
-
-a.button.button-stripe:active {
-    color: #222222;
-    background-color: #e5e5e5;
-    border-color: #e5e5e5;
-}
-
-/* header --------------------------  */
+/*=======================
+ Global Nav Section
+=======================*/
 nav { float: right; padding: 0 60px; }
 nav ul { list-style: none; list-style-image: none; }
 nav ul li { display: inline-block; border-right: 1px dotted rgba(255, 255, 255, 0.2); transition: all 0.5s ease; -moz-transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; padding-left: 18px; position: relative; }
 nav ul li:last-child { border: none; }
-nav ul li a { color: rgba(255, 255, 255, 0.6); display: block; padding: 20px; transition: all 0.5s ease; -moz-transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; padding-left: 0; position: relative; font-size: 16px; }
+nav ul li a { color: rgba(255, 255, 255, 0.6); display: block; padding: 20px; transition: all 0.5s ease; -moz-transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; padding-left: 0; position: relative; font-size: 16px; letter-spacing:1px; }
 nav ul li a:hover, nav ul li a:focus, nav ul li .active { text-decoration: none; color: rgba(255, 255, 255, 1); }
 
-
-header { padding: 20px 0 250px; background: url(../img/header.jpg) no-repeat 50% 50%; color: white; -moz-background-size: cover; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-header .header-content { padding-top: 180px; }
+/*=======================
+ Home-Header Section
+=======================*/
+header { padding: 20px 0 280px; background: url(../img/header.jpg) no-repeat 50% 50%; color: white; -moz-background-size: cover; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+header .header-content { padding-top: 180px; letter-spacing:1px; }
 header h1 { font-size: 70px; line-height: 70px; font-weight: 500; margin-bottom: 38px; }
 header h1 span { color: rgba(60,202,202,1); display: inline-block; font-weight: 200; }
-header p { padding: 12px 0 0; font-size: 24px; line-height: 24px; color: white; }
+header p { padding: 12px 0 0; font-size:24px; line-height:24px; color:#fff; }
 header .buttons-wrapper { padding-top: 53px; }
 header .buttons-wrapper .button-stripe { margin-left: 14px; }
 
-.brokerage { padding: 31px 0 25px; }
+/*=======================
+ Home-Brokerage Section
+=======================*/
+.brokerage { padding: 31px 0 25px; letter-spacing:1px; }
 .brokerage-content { padding: 37px 20px 50px 20px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .brokerage h1 { font-size: 64px; line-height: 64px; font-weight: bold; margin-bottom: 29px; }
 .brokerage p { font-size: 16px; }
 .brokerage-button { padding-top: 30px; margin: 0 -10px; clear: both; }
-.button-link { height: 62px; float: left; padding-left: 25px; padding-right: 0; width: 180px; text-align: left; margin: 0 10px 20px; position: relative; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.button-link:after { content: ""; position: absolute; left: 23px; top: 14px; width: 32px; height: 32px; background-position: -100px 0; }
-.button-link-title { padding: 11px 0 1px; display: block; font-size: 13px; line-height: 13px; text-align: left; }
-.button-link-subtitle { display: block; font-size: 23px; line-height: 23px; text-align: left; }
-
+.brokerage-tutor { background:url('../img/brokerage-bg.jpg') no-repeat center top; -webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover; background-size:cover; background-attachment:scroll; }
+/***************** Carousel ******************/
+.carousel-fade .carousel-inner .item {
+  	opacity: 0;
+  	-webkit-transition-property: opacity;
+  	-moz-transition-property: opacity;
+  	-o-transition-property: opacity;
+  	transition-property: opacity;
+  	padding-bottom: 80px;
+}
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+.carousel-fade .carousel-inner .item img {
+	margin:auto;
+}
+.carousel-inner .item .carousel-caption h3 { font-size:32px; line-height:32px; font-weight: bold; letter-spacing:1px; }
+.carousel-inner .item .carousel-caption p { font-size: 16px; color: #fff; letter-spacing:1px; }
 /*=======================
- Blog Section
+ Home-Blog Section
 =======================*/
-.blog { background: rgba(60,202,202,1); padding: 31px 0 25px; color:#fff; }
+.blog { background: rgba(60,202,202,1); padding: 31px 0 25px; color:#fff; letter-spacing:1px; }
 .blog-content { padding: 37px 20px 50px 20px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .blog h1 { font-size: 64px; line-height: 64px; font-weight: bold; margin-bottom: 29px; }
-.blog p { font-size: 16px; color: #fff; }
+.blog p { font-size: 16px; color: #fff; letter-spacing:1px; }
 .blog-button { padding: 30px 0 0 20px; margin: 0 -10px; clear: both; }
+
+/*=======================
+ About Section
+=======================*/
+.about { letter-spacing:1px; }
+.about-content { padding: 40px 20px 20px 20px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.about h1 { font-size: 32px; line-height: 32px; font-weight: bold; margin-bottom: 20px; }
+.about p { font-size: 16px; }
+.about p span { color: rgba(60,202,202,1); }
+.about p a { color: rgba(60,202,202,0.7); display: inline-block; transition: all 0.5s ease; -moz-transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; position: relative; }
+.about p a:hover, .about p a:focus { text-decoration: none; color: rgba(60,202,202,1); }
+.down-arrow-btn { width: 40px; height: 40px; border-radius: 50%; -moz-border-radius: 50%; -webkit-border-radius: 50%; -o-border-radius: 50%; background: rgba(61,201,179,0.8); display: inline-block; margin: 10px auto 20px; color: #fff; font-size: 16px; line-height: 43px; }
+.down-arrow-btn:hover, .down-arrow-btn:focus { color: #fff; background: rgba(61, 201, 179, 1); }
+
+/* ======================
+ Break Section
+=======================*/
+.break { background:url('../img/break.jpg') no-repeat center center; -webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover; background-size:cover; background-attachment:fixed; padding:80px 0; }
+.break h1 { font-size:36px; line-height: 36px; text-align:center; letter-spacing:2px; font-weight:bold; }
+.break-stripe { display: inline-block; padding: 25px 50px; color: #fff; border: solid 3px #fff; cursor: pointer; border-radius:10px; }
+.break-stripe:hover, .break-stripe:focus { color:rgba(60,202,202,1); border:solid 3px rgba(60,202,202,1); }
+
+/*=======================
+ Blog-Feeds Section
+=======================*/
+.blog-feeds { letter-spacing:1px; padding: 40px 20px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.blog-feeds h1 { font-size: 32px; line-height: 32px; font-weight: bold; margin-bottom: 30px; text-align:center; }
+.blog-feeds ul { list-style: none; list-style-image: none; padding:0; }
+.blog-feeds ul li { display: inline-block; }
+.blog-feeds p { font-size: 16px; }
+.blog-feeds a { font-size: 16px; color: rgba(60,202,202,0.7); display: inline-block; transition: all 0.5s ease; -moz-transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; position: relative; margin-bottom:10px; }
+.blog-feeds a:hover, .about p a:focus { text-decoration: none; color: rgba(60,202,202,1); }
+
+/* ======================
+ Subscribe Section
+=======================*/
+.subscribe { background:url('../img/subscribe.jpg') no-repeat center center; -webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover; background-size:cover; background-attachment:fixed; padding:80px 0; }
+.subscribe h1 { color:#fff; font-size:36px; line-height:36px; letter-spacing:1px; }
+.subscribe p { color:#fff; font-size:16px; line-height:16px; letter-spacing:1px; margin-top:10px; }
+.subscribe input[type=email] { background-color: rgba(255, 255, 255, 0.1); border: solid 1px #fff; padding: 15px 40px; margin:5px; color: #fff; letter-spacing:1px; }
+.subscribe input[type=submit] { background: rgba(61, 201, 179, 0.5); border: solid 1px rgba(61, 201, 179, 0.5); padding: 15px 25px; margin:5px; color: #fff; letter-spacing: 1px; transition: all 0.5s ease; -moz-transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; }
+.subscribe input[type=submit]:hover { background: rgba(61, 201, 179, 1); border: solid 1px rgba(61, 201, 179, 1); color: #fff; }
+.response { color:#fff; }
 
 /*=======================
  Header Section
 =======================*/
-.header { padding: 20px 0; background: url(../img/header.jpg) no-repeat 20% 20%; color: white;  -moz-background-size: cover; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.header { padding: 20px 0; background: url('../img/header.jpg') no-repeat 20% 20%; color: white;  -moz-background-size: cover; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .header h1 { font-size: 40px; margin: 10px 20px; }
 .header h1 a { color: rgba(255,255,255,0.8); transition: all 0.5s ease; -moz-transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; position: relative; }
 .header h1 a span { color: rgba(60,202,202,0.9); display: inline-block; transition: all 0.5s ease; -moz-transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; position: relative; }
@@ -138,6 +175,7 @@ header .buttons-wrapper .button-stripe { margin-left: 14px; }
 .main { background: #fff no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; padding: 0 0 30px 0; height: auto; }
 .main .subtitle { padding: 10px 10px 40px 10px; }
 .main .item-list { padding: 0 10px; }
+.main h1 { font-size: 40px; line-height: 40px; font-weight: bold; margin-bottom: 29px; }
 .main a { text-decoration: none; margin: 10px; color:rgba(255,74,74,0.88); transition: all 0.5s ease; -moz-transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; }
 .main a:hover { color:rgba(227,66,66,1); }
 .main input[type=submit] { background: rgba(60,202,202,0.88); border: solid 1px rgba(60,202,202,0.88); padding: 10px 30px; margin:10px; color: #fff; text-transform: uppercase; transition: all 0.5s ease; -moz-transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; }
@@ -155,7 +193,7 @@ header .buttons-wrapper .button-stripe { margin-left: 14px; }
 /*=======================
  Summary Section
 =======================*/
-.summary { background: #fff no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; padding: 10px 0 30px 0; background-attachment: fixed; height: auto; }
+.summary { padding: 10px 0 30px 0; background-attachment: fixed; height: auto; }
 
 /*=======================
  Credit Section
@@ -163,26 +201,49 @@ header .buttons-wrapper .button-stripe { margin-left: 14px; }
 .credit { background: #4d4d4d no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; padding: 25px 0; color:#fff; }
 .credit i { color: rgba(60,202,202,1); }
 
-/* ==========================================================================
-Contact
-========================================================================== */
-.contact-details { margin: 20px 10px; }
-.contact-details h2 { font-size: 20px; }
-.contact-details h2 span { display: block; color: #3dc9b3; text-transform: uppercase; letter-spacing: 1px; font-size: 16px; margin-top: 15px; }
-.contact-wrap { position: relative; }
+/*=======================
+ Contact Section
+=======================*/
+.contact-details { margin:20px 10px; letter-spacing:1px; }
+.contact-details h2 { font-size:20px; }
+.contact-details h2 span { display:block; color:#3dc9b3; text-transform:uppercase; letter-spacing:1px; font-size:16px; margin-top:15px; }
+.contact-wrap { position:relative; padding:35px 0; }
+
+/*=======================
+ Adsense Section
+=======================*/
+.adsense { margin:auto; }
+
+/*=======================
+ Policy & Terms Section
+=======================*/
+.policy-term { letter-spacing:1px; }
+.policy-term-content { padding: 60px 20px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.policy-term h1 { font-size: 32px; line-height: 32px; font-weight: bold; margin-bottom: 20px; }
+.policy-term p { font-size: 16px; }
+.policy-term p span { color: rgba(60,202,202,1); }
+.policy-term p a { color: rgba(60,202,202,0.7); display: inline-block; transition: all 0.5s ease; -moz-transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; position: relative; }
+.policy-term p a:hover, .about p a:focus { text-decoration: none; color: rgba(60,202,202,1); }
 
 /*=======================
  Footer Section
 =======================*/
-footer { background: #1e1e1e no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; padding: 35px 0; color:#fff; }
-footer span { color: rgba(60,202,202,1); }
+footer { background: #1e1e1e no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; padding: 25px 0; }
+footer p { color:#fff; margin: 0; }
+footer p a { color:#fff; }
+footer p span { color: rgba(60,202,202,1); }
 
 @media (max-width: 979px) { 
   nav ul li a span { display:none; }
+  .blog-feeds a { text-align: center; margin-top:10px; }
 }
 
 @media (max-width: 479px) { 
-  header .header-content { padding-top: 100px; }
-  nav { padding: 0 5px; }
-  .header { text-align:center;}
+	header { padding-bottom:50px; }
+	header .header-content { padding-top:100px; }
+	nav { padding: 0 5px; }
+	.header { text-align:center;}
+	.brokerage-tutor { display:none; }
+	.blog-feeds p { display:none; }
+	.carousel-caption p { display:none; }
 }

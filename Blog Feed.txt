@@ -1,0 +1,87 @@
+<script language="JavaScript" src="http://feed2js.org//feed2js.php?src=http%3A%2F%2Fblog.earnsup.com%2Ffeed%2F&chan=y&num=5&desc=200&utf=y"  charset="UTF-8" type="text/javascript"></script>
+
+
+Output
+===============
+
+feed2js_ck = true;
+
+document.write('<div class="rss-box">');
+document.write('<p class="rss-title"><a class="rss-title" href="http://blog.earnsup.com" target="_self">EARN$UP</a><br /><span class="rss-item">Blog</span></p>');
+document.write('<ul class="rss-items">');
+document.write('<li class="rss-item"><a class="rss-item" href="http://blog.earnsup.com/2015/04/what-is-fed-and-how-does-it-affect-us/" target="_self">What is ‚ÄúFed‚Äù and How Does It Affect Us?</a><br />');
+document.write('The Federal Reserve regularly dominates the financial headlines, but their announcements can often seem like they‚Äôre speaking a different language. What is the Fed, and why do so many people pay so mu...');
+document.write('</li>');
+document.write('<li class="rss-item"><a class="rss-item" href="http://blog.earnsup.com/2015/04/mindset-of-financial-success-is-more-than-math/" target="_self">Mindset of Financial Success Is More Than Math</a><br />');
+document.write('Spend less than you earn is the golden rule of personal finance. It‚Äôs incredibly simple, but it‚Äôs not easy. Your brain likes to get in the way by tricking you to go against what you know to be true. H...');
+document.write('</li>');
+document.write('<li class="rss-item"><a class="rss-item" href="http://blog.earnsup.com/2015/04/deduction-of-malaysia-income-tax-2015/" target="_self">Deduction of Malaysia Income Tax 2015</a><br />');
+document.write('Our previous guide in¬ Calculation of Malaysia Income Tax 2015¬ share the way to calculate your chargeable income¬ for assessment year 2014. Beside, we able¬ to avoid excessive tax amount by declare our t...');
+document.write('</li>');
+document.write('<li class="rss-item"><a class="rss-item" href="http://blog.earnsup.com/2015/04/calculation-of-malaysia-income-tax-2015/" target="_self">Calculation of Malaysia Income Tax 2015</a><br />');
+document.write('Tax season is here again and if you have yet to file your taxes, fear not, we have a comprehensive guide for you here. In a nutshell, the Malaysian tax system is progressive, which means you only pay ...');
+document.write('</li>');
+document.write('<li class="rss-item"><a class="rss-item" href="http://blog.earnsup.com/2015/03/10-amazing-tips-for-investing-in-the-next-company/" target="_self">10 Amazing Tips for Investing in the Next Company</a><br />');
+document.write('Investing in the next big business is the ultimate goal of any investor who is hoping to make some return investment on supporting a great idea. However, finding the ideal investment is not always the...');
+document.write('</li>');
+document.write('</ul></div>');
+
+
+
+
+Carousel
+
+<div id="Carousel" class="carousel slide carousel-fade col-lg-12">
+        <ol class="carousel-indicators">
+            <li data-target="Carousel" data-slide-to="0" class="active"></li>
+            <li data-target="Carousel" data-slide-to="1"></li>
+            <li data-target="Carousel" data-slide-to="2"></li>
+        </ol>
+
+        <div class="carousel-inner">
+            <div class="item active">
+              <img src="//placehold.it/1300x500" class="img-responsive" style="margin:auto;">
+              <div class="carousel-caption">
+                <h3>testing</h3>
+                <p>this is fucking long description and blahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</p>
+              </div>
+            </div>
+           <div class="item">
+             <img src="//placehold.it/1300x500/55EE55" class="img-responsive">
+            </div>
+           <div class="item">
+             <img src="//placehold.it/1300x500/CCFEFE" class="img-responsive">
+            </div>
+        </div>
+
+        <a class="left carousel-control" href="#Carousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#Carousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+</div>
+
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+}
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-fade .carousel-control {
+  z-index: 2;
+}

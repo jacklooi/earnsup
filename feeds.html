@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+
+    google.load("feeds", "1");
+	
+	function initialize() {
+	  var url = "http://blog.earnsup.com/feed/";
+	  var feed = new google.feeds.Feed(url);
+	  feed.setNumEntries(5);
+	  feed.load(function(result) {
+		if (!result.error) {
+		  var ul = document.createElement('ul');
+		  var container = document.getElementById("feed");
+		  for (var i = 0; i < result.feed.entries.length; i++) {
+			var entry = result.feed.entries[i];
+			var li = document.createElement('li');
+			var a = document.createElement('a');
+			var p = document.createElement('p');
+			a.innerHTML = entry.title;
+			a.href = entry.link;
+			a.target = entry.link;
+			p.innerHTML = entry.content.substring(0,250)+' ...';
+			li.appendChild(a);
+			li.appendChild(p);
+			ul.appendChild(li);
+		  }
+		  container.appendChild(ul);
+		}
+	  });
+	}
+	google.setOnLoadCallback(initialize);
+
+    </script>
+  </head>
+  <body>
+    <div id="feed"></div>
+  </body>
+</html>
